@@ -1,0 +1,14 @@
+exit
+
+send { "method":"GET", "resource":"/trading/get_model", "params": { "models":["Summary"] } }
+send { "method":"POST", "resource":"/subscribe", "params": { "pairs":["EUR/USD"] } }
+send { "method":"POST", "resource":"/trading/open_trade", "params": { "account_id":"01027808", "symbol":"EUR/USD", "is_buy":false, "amount":10, "time_in_force":"FOK" } }
+
+send_raw { "method":"GET", "resource":"/trading/get_model", "params":"models=Summary" }
+
+
+--- Live Prices module ---
+load {"filename":"liveprices.js"}
+price_subscribe {"pairs":"EUR/USD"}
+price_subscribe {"pairs":["GBP/USD","USD/JPY"]}
+price_unsubscribe {"pairs":["EUR/USD","GBP/USD","USD/JPY"]}
