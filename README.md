@@ -3,10 +3,10 @@ FXCM RESTful API client example for nodejs.
 
 Requrements:
 1. Node.js version 4 or greater
-2. Socket.IO version 1.7.3
+2. Socket.IO version 1.7.3 (you can use 'npm install')
 
 To run this example:
 
-1. Change token, host, port and protocol in client5.js
+1. Change token, host, port and protocol in config.js
 2. Start the client with: node client5.js
 3. Use commands from commands5.txt
