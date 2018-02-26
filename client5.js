@@ -1,13 +1,22 @@
 "use strict";
 //
-// begin Connection parameters
+// begin Load and check connection parameters
 //
-var token = "235cda06790be36e74f795c23908f3e4cc336461"; // get this from http://tradingstation.fxcm.com/
-var trading_api_host = 'localhost';
-var trading_api_port = 8885;
-var trading_api_proto = 'http'; // http or https
+var config = require('./config.js');
+var token = config.token;
+var trading_api_host = config.trading_api_host;
+var trading_api_port = config.trading_api_port;
+var trading_api_proto = config.trading_api_proto;
+if(typeof(token) === 'undefined' || typeof(trading_api_host) === 'undefied' || typeof(trading_api_port) === 'undefined' || typeof(trading_api_proto) === 'undefined') {
+	console.log('config.js contents error');
+	process.exit();
+}
+if(token === 'PASTE_YOUR_TOKEN_HERE') {
+	console.log('please paste your token in config.js file');
+	process.exit();
+}
 //
-// end Connection parameters
+// end Load and check connection parameters
 //
 
 //
