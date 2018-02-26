@@ -7,6 +7,7 @@ Requrements:
 
 To run this example:
 
-1. Change token, host, port and protocol in config.js
-2. Start the client with: node client5.js
-3. Use commands from commands5.txt
+1. Rename or copy config.sample.js into config.js
+2. Change token, host, port and protocol in config.js
+3. Start the client with: node client5.js
+4. Use commands from commands5.txt
