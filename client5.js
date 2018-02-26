@@ -2,7 +2,13 @@
 //
 // begin Load and check connection parameters
 //
-var config = require('./config.js');
+var config;
+try {
+	config = require('./config.js');
+} catch (e) {
+	console.log('Error loading config.js. Please rename or copy config.sample.js into config.js');
+	process.exit();
+}
 var token = config.token;
 var trading_api_host = config.trading_api_host;
 var trading_api_port = config.trading_api_port;
