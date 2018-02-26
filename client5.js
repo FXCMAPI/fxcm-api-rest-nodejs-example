@@ -44,7 +44,7 @@ var default_callback = (statusCode, requestID, data) => {
 			console.log('request #', requestID, ' JSON parse error:', e);
 			return;
 		}
-		console.log('request #', requestID, ' has been executed:', jsonData);
+		console.log('request #', requestID, ' has been executed:', JSON.stringify(jsonData, null, 2));
 	} else {
 		console.log('request #', requestID, ' execution error:', statusCode, ' : ', data);
 	}
