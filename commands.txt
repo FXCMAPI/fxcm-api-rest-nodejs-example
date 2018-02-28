@@ -31,6 +31,12 @@ send { "method":"POST", "resource":"/trading/change_order", "params": { "order_i
 // delete waiting order
 send { "method":"POST", "resource":"/trading/delete_order", "params": { "order_id":"241163945" } }
 
+// request historical price data
+send { "method":"GET", "resource":"/candles/1/m1", "params": { "num":10 } }
+send { "method":"GET", "resource":"/candles/1/m1", "params": { "num":1, "from":1519084679, "to":1519430400 } }
+send { "method":"GET", "resource":"/candles/1/d1", "params": { "num":1, "from":1515024000, "to":1516752000 } }
+send { "method":"GET", "resource":"/candles/1/d1", "params": { "num":1, "from":1515456000, "to":1517529600 } }
+
 --- Live Prices module ---
 load {"filename":"liveprices.js"}
 
