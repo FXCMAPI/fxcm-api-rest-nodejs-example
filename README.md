@@ -11,3 +11,8 @@ To run this example:
 2. Change token, host, port and protocol in config.js
 3. Start the client with: node main.js
 4. Use commands from commands.txt
+
+## Note:
+o	This is for personal use and abides by our [EULA](https://www.fxcm.com/uk/forms/eula/)
+
+o	For more information, you may contact us: api@fxcm.com
